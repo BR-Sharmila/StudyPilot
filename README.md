@@ -1,180 +1,93 @@
 # 🚀 StudyPilot
 
-> **A smart student productivity web application designed to bring study planning, academic management, notes, quizzes, calculations, and AI assistance into one place.**
+### 📚 A Smart Student Productivity Web Application
 
-StudyPilot is a web-based student productivity application created to help students organize their academic activities from a single, simple dashboard.
+StudyPilot is a student-focused web application designed to bring **study planning, academic management, notes, quizzes, calculations, and AI assistance** into one simple platform.
 
-Instead of switching between different tools for planning, notes, exams, calculations, and study assistance, StudyPilot brings these features together in one application.
+It is built as a practical Computer Science project to improve productivity and make everyday academic tasks easier for students.
 
 ---
 
 ## 🎥 StudyPilot Demo
 
-Watch the StudyPilot project demonstration to see the application, interface, and main features in action.
-
-▶️ **[Watch the StudyPilot Demo](YOUR_VIDEO_LINK_HERE)**
-
-> 🎬 The demo video showcases the current version of StudyPilot and its main functionality.
+A visual demonstration of StudyPilot's main features and functionality.
 
 ---
 
-## 🌐 Live Demo
+## ✨ Features
 
-Try the StudyPilot application online:
+### 🏠 Dashboard
 
-🔗 **[Open StudyPilot](YOUR_LIVE_DEMO_LINK_HERE)**
+* Centralized student dashboard
+* Quick access to important sections
+* Simple and clean interface
 
-> Replace the link above with your deployed StudyPilot website URL.
+### 📅 Study Planner
 
----
+* Plan and organize study activities
+* Manage academic tasks
+* Track planned activities
 
-## 📌 Project Overview
+### 📝 Exams
 
-Students often use multiple applications to manage different parts of their academic life.
+* Manage examination-related information
+* Organize subjects and exam details
+* View academic information in one place
 
-**StudyPilot** aims to provide a centralized workspace where students can:
+### 📒 Notes
 
-* 📊 View their study dashboard
-* 📅 Plan their studies
-* 📝 Create and manage notes
-* 📚 Organize exam-related information
-* 🧮 Perform calculations
-* 🧠 Practice through quizzes
-* 🤖 Get assistance through an AI-powered helper
+* Create and manage study notes
+* Organize important information
+* Easy access to saved notes
 
-The project is designed with a clean, student-friendly interface and is continuously being improved.
+### 🧮 Calculator
 
----
+* Built-in calculator
+* Useful for quick academic calculations
+* Simple user interface
 
-# ✨ Features
+### 🧠 Quiz
 
-## 📊 Dashboard
+* Practice through quizzes
+* Improve subject knowledge
+* Useful for self-assessment
 
-The StudyPilot Dashboard provides a central place to access the different sections of the application.
+### 🤖 AI Assistant
 
-### Includes
-
-* Quick navigation to StudyPilot modules
-* Organized student-focused interface
-* Easy access to academic tools
-* Centralized application navigation
-
----
-
-## 📅 Study Planner
-
-The Planner helps students organize their study activities.
-
-### Features
-
-* Study planning
-* Academic task organization
-* Date-based planning
-* Student-focused planning interface
-
-The planner is designed to make it easier to organize study activities and maintain a consistent routine.
+* AI-powered student assistance
+* Ask questions and receive responses
+* Designed to support learning and academic activities
 
 ---
 
-## 📚 Exams
+## 🛠️ Technologies Used
 
-The Exams section helps students organize examination-related information.
-
-### Designed for
-
-* Exam planning
-* Subject organization
-* Examination tracking
-* Academic information management
-
----
-
-## 📝 Notes
-
-The Notes module provides a dedicated space for managing study notes.
-
-### Features
-
-* Create notes
-* Edit notes
-* Organize study information
-* Manage notes directly inside the application
-
-It is designed to provide students with a simple digital study-notebook experience.
+| Technology | Purpose                             |
+| ---------- | ----------------------------------- |
+| HTML5      | Web page structure                  |
+| CSS3       | Styling and user interface          |
+| JavaScript | Application logic and interactivity |
+| AI API     | AI Assistant functionality          |
+| Git        | Version control                     |
+| GitHub     | Source code hosting                 |
 
 ---
 
-## 🧮 Calculator
-
-StudyPilot includes a built-in calculator for quick calculations while studying.
-
-### Useful for
-
-* Mathematical calculations
-* Academic calculations
-* Quick numerical operations
-* Everyday calculations
-
----
-
-## 🧠 Quiz
-
-The Quiz section provides an interactive way for students to practice their knowledge.
-
-### Purpose
-
-* Practice questions
-* Self-assessment
-* Knowledge testing
-* Active recall
-* Interactive learning
-
----
-
-## 🤖 AI Assistant
-
-StudyPilot includes an AI Assistant designed to provide students with study-related assistance.
-
-### The AI Assistant can help with
-
-* Study questions
-* Explanations
-* Learning assistance
-* General academic support
-
-The AI Assistant is integrated into the StudyPilot interface so students can access assistance while using the application.
-
-> ⚠️ **Note:** AI-generated responses may sometimes contain mistakes. Important academic information should be verified with reliable sources.
-
----
-
-# 🛠️ Technologies Used
-
-| Technology | Purpose                                    |
-| ---------- | ------------------------------------------ |
-| HTML5      | Web page structure                         |
-| CSS3       | Styling and user interface                 |
-| JavaScript | Application functionality and interactions |
-| AI API     | AI Assistant functionality                 |
-| Git        | Version control                            |
-| GitHub     | Source code hosting                        |
-
----
-
-# 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 StudyPilot/
 │
 ├── index.html
+├── style.css
+├── script.js
+├── reset.js
 │
-├── ai-helper.html
-├── ai-helper.css
-├── ai-helper.js
+├── dashboard.js
 │
-├── calculator.html
-├── calculator.css
-├── calculator.js
+├── planner.html
+├── planner.css
+├── planner.js
 │
 ├── exams.html
 ├── exams.css
@@ -184,209 +97,180 @@ StudyPilot/
 ├── notes.css
 ├── notes.js
 │
-├── planner.html
-├── planner.css
-├── planner.js
+├── calculator.html
+├── calculator.css
+├── calculator.js
 │
 ├── quiz.html
 ├── quiz.css
 ├── quiz.js
 │
-├── dashboard.js
-├── script.js
-├── reset.js
-│
-└── style.css
+├── ai-helper.html
+├── ai-helper.css
+└── ai-helper.js
 ```
 
 ---
 
-# 🎯 Project Goals
+## 🎯 Project Goals
 
 The main goals of StudyPilot are to:
 
-1. Help students organize their academic activities.
-2. Provide commonly needed study tools in one application.
-3. Make study planning easier.
-4. Encourage consistent academic organization.
-5. Provide AI-powered study assistance.
-6. Create a practical real-world software project.
-7. Improve practical skills in web development and software engineering.
+* Make academic planning easier
+* Keep important student tools in one place
+* Encourage consistent study habits
+* Provide quick access to notes and quizzes
+* Provide AI-based learning assistance
+* Build practical skills in web development
+* Create a useful real-world student project
 
 ---
 
-# 👩‍💻 Developer
+## 👩‍💻 Developer
 
-## BR Sharmila
+**BR Sharmila**
 
-**BE Computer Science & Engineering Student**
+BE Computer Science & Engineering Student
+UBDT College of Engineering, Davangere
 
-**UBDT College of Engineering, Davangere**
-
-StudyPilot is developed as a practical software project while learning and improving skills in:
+StudyPilot was developed as a practical project to apply concepts of:
 
 * Web Development
-* JavaScript
-* UI/UX Design
+* JavaScript Programming
+* User Interface Design
 * AI Integration
-* Git & GitHub
-* Software Development
-* Problem Solving
+* Version Control
+* GitHub
 
 ---
 
-# 📈 Project Status
+## 📌 Project Status
 
-🟢 **Working Prototype**
+**Current Status:** 🟢 Working Prototype
 
-StudyPilot is an actively developing project.
+The core StudyPilot features are implemented and functional.
 
-The current version contains the main application modules and an integrated AI Assistant.
-
-Future versions may include additional features, improvements, bug fixes, performance improvements, and UI enhancements.
+The project will continue to improve with additional features, better UI, security improvements, and enhanced functionality.
 
 ---
 
-# 🔮 Future Improvements
+## 🚀 Future Improvements
 
-Possible future improvements include:
+Planned improvements include:
 
 * 📱 Improved mobile responsiveness
 * 🌙 Dark mode
-* 👤 Student authentication
+* 🔐 User authentication
 * ☁️ Cloud-based data storage
-* 🔔 Study reminders
-* 📊 Advanced academic analytics
-* 📅 Improved calendar integration
-* 📝 Enhanced note organization
-* 🧠 More advanced quiz functionality
-* 🤖 Improved AI study assistance
-* 📈 Student progress tracking
-* 🔐 Improved API security
+* ⏰ Study reminders
+* 📊 Student progress analytics
+* 📅 Calendar integration
+* 📒 Enhanced notes management
+* 🧠 More advanced quizzes
+* 🤖 Improved AI assistance
+* 📈 Progress tracking
+* 🔒 Secure API architecture
 * ⚡ Performance improvements
 
 ---
 
-# 🔐 Security
+## 🔐 Security
 
-If the AI Assistant uses an API key, **API keys and private credentials should never be committed directly to a public GitHub repository.**
+If the AI Assistant uses an API key, **never publish the API key directly inside a public GitHub repository**.
 
-Sensitive credentials should be handled securely using appropriate environment variables and/or a backend service.
+API keys and other sensitive credentials should be stored securely using environment variables and a backend/serverless API when appropriate.
 
-> ⚠️ **Never publish API keys, passwords, access tokens, or other private credentials in this repository.**
+> ⚠️ Never commit passwords, API keys, tokens, or other private credentials to GitHub.
 
 ---
 
-# 🚀 Getting Started
+## 💻 Getting Started
 
-## 1. Clone the Repository
+### 1. Clone the Repository
+
+Clone the StudyPilot repository to your computer:
 
 ```bash
 git clone https://github.com/BR-Sharmila/StudyPilot.git
 ```
 
-## 2. Open the Project
+### 2. Open the Project
 
 ```bash
 cd StudyPilot
 ```
 
-## 3. Run the Application
+### 3. Run the Application
 
-StudyPilot is a web application and can be opened using a modern web browser.
-
-For development, **VS Code Live Server** is recommended.
-
-### Using Live Server
-
-1. Open the StudyPilot folder in VS Code.
-2. Install the Live Server extension if necessary.
-3. Right-click `index.html`.
-4. Select **Open with Live Server**.
-5. StudyPilot will open in your browser.
+You can open `index.html` directly in a browser or use **VS Code Live Server** for a better development experience.
 
 ---
 
-# 🔄 Development Workflow
+## 🔄 Development Workflow
 
-StudyPilot uses Git for version control.
+The project is maintained using Git and GitHub.
 
-After making changes to the project:
+Typical workflow:
 
 ```bash
 git add .
-```
-
-Create a commit:
-
-```bash
 git commit -m "Describe your changes"
-```
-
-Push the changes to GitHub:
-
-```bash
 git push
 ```
 
+This keeps the latest changes synchronized with the GitHub repository.
+
 ---
 
-# 📚 Learning Outcomes
+## 📚 Learning Outcomes
 
-Developing StudyPilot provides practical experience with:
+Through StudyPilot, I gained practical experience in:
 
-* HTML5
-* CSS3
-* JavaScript
-* DOM manipulation
+* Building multi-page web applications
+* HTML structure and semantic markup
+* CSS styling and layouts
+* JavaScript DOM manipulation
 * Event handling
-* Web application development
-* API integration
-* AI integration
-* Debugging
-* Git
-* GitHub
-* Version control
-* Project documentation
-* Software development practices
+* Form handling
+* Creating interactive interfaces
+* Integrating AI functionality
+* Debugging frontend code
+* Using Git and GitHub
+* Managing a software project
 
 ---
 
-# 🌟 Why StudyPilot?
+## 💡 Why StudyPilot?
 
-StudyPilot is built around a simple idea:
+Students often use different applications for planning, notes, calculations, quizzes, and academic management.
 
-> **Make studying more organized, accessible, and productive from one place.**
+StudyPilot aims to bring these useful tools together into **one simple student-focused platform**.
 
-By combining planning, notes, exams, quizzes, calculations, and AI assistance, StudyPilot provides students with a centralized academic workspace.
-
----
-
-# 🤝 Contributions
-
-StudyPilot is currently maintained as a personal learning and development project.
-
-Suggestions, feedback, and ideas for improvement are welcome.
-
-If you find an issue, you can open a GitHub Issue and describe:
-
-* What happened
-* How to reproduce the problem
-* What you expected to happen
-* Any relevant screenshots or error messages
+The project is also an opportunity to continuously improve my skills in **software development, problem solving, UI design, and AI integration**.
 
 ---
 
-# ⭐ Support the Project
+## 🤝 Contributions
 
-If you find StudyPilot interesting or useful, consider giving the repository a ⭐ on GitHub.
+Suggestions and improvements are welcome.
 
-Your support and feedback are greatly appreciated.
+If you have an idea that could make StudyPilot more useful for students, feel free to suggest it.
 
 ---
 
-## 🚀 StudyPilot
+## ⭐ Support the Project
 
-### **Plan. Learn. Practice. Improve.**
+If you find StudyPilot useful or interesting:
 
-**Built with ❤️ using HTML, CSS, JavaScript, and AI.**
+⭐ Star the repository
+💡 Share your ideas
+🐛 Report issues
+🚀 Follow the project's development
+
+---
+
+## 🌟 Closing
+
+**Plan. Learn. Practice. Improve.**
+
+### 🚀 StudyPilot — Built to make student life smarter and more organized.
