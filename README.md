@@ -10,11 +10,21 @@ Instead of switching between different tools for planning, notes, exams, calcula
 
 ## 🎥 StudyPilot Demo
 
-Watch the StudyPilot project demonstration to see the application, its interface, and its main features in action.
+Watch the StudyPilot project demonstration to see the application, interface, and main features in action.
 
 ▶️ **[Watch the StudyPilot Demo](YOUR_VIDEO_LINK_HERE)**
 
 > 🎬 The demo video showcases the current version of StudyPilot and its main functionality.
+
+---
+
+## 🌐 Live Demo
+
+Try the StudyPilot application online:
+
+🔗 **[Open StudyPilot](YOUR_LIVE_DEMO_LINK_HERE)**
+
+> Replace the link above with your deployed StudyPilot website URL.
 
 ---
 
@@ -239,7 +249,7 @@ Future versions may include additional features, improvements, bug fixes, perfor
 
 # 🔮 Future Improvements
 
-Planned or possible improvements include:
+Possible future improvements include:
 
 * 📱 Improved mobile responsiveness
 * 🌙 Dark mode
@@ -364,12 +374,6 @@ If you find an issue, you can open a GitHub Issue and describe:
 * How to reproduce the problem
 * What you expected to happen
 * Any relevant screenshots or error messages
-
----
-
-# 📄 License
-
-A license can be added to this project depending on how StudyPilot is intended to be distributed.
 
 ---
 
