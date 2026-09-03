@@ -1,0 +1,354 @@
+/* =========================================
+   STUDYPILOT — VTU CALCULATOR
+========================================= */
+
+.calculator-page {
+    max-width: 1200px;
+}
+
+/* INTRO */
+
+.calculator-intro {
+    background: linear-gradient(135deg, #eef2ff, #f8f7ff);
+    border: 1px solid #e0e4ff;
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.calculator-intro h2 {
+    margin: 8px 0;
+    color: #111827;
+    font-size: 25px;
+}
+
+.calculator-intro p {
+    color: #6b7280;
+    font-size: 13px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* CALCULATOR LAYOUT */
+
+.calculator-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr;
+    gap: 20px;
+}
+
+/* CARD */
+
+.calculator-card,
+.result-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.calculator-card h2,
+.result-card h2 {
+    color: #111827;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    color: #6b7280;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+/* SEMESTER */
+
+.semester-selector {
+    margin-bottom: 20px;
+}
+
+.semester-selector label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+.semester-selector select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: white;
+    font-size: 13px;
+    outline: none;
+}
+
+.semester-selector select:focus {
+    border-color: #4f46e5;
+}
+
+/* SUBJECT TABLE */
+
+.subject-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.subject-table th {
+    background: #f8fafc;
+    color: #6b7280;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 11px 8px;
+    text-align: left;
+}
+
+.subject-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f1f3;
+    font-size: 12px;
+    color: #374151;
+}
+
+.subject-table tr:last-child td {
+    border-bottom: none;
+}
+
+.subject-name {
+    font-weight: 600;
+    color: #111827;
+}
+
+.subject-code {
+    font-size: 10px;
+    color: #9ca3af;
+    margin-top: 2px;
+}
+
+/* MARK INPUT */
+
+.mark-input {
+    width: 75px;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 12px;
+    text-align: center;
+    outline: none;
+}
+
+.mark-input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px #eef2ff;
+}
+
+/* CREDIT */
+
+.credit-value {
+    font-weight: 600;
+    color: #4f46e5;
+}
+
+/* GRADE */
+
+.grade-display {
+    display: inline-flex;
+    min-width: 34px;
+    justify-content: center;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #f3f4f6;
+    color: #374151;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* BUTTONS */
+
+.calculator-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.calculate-button {
+    border: none;
+    background: #4f46e5;
+    color: white;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calculate-button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+.reset-button {
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #374151;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.reset-button:hover {
+    background: #f9fafb;
+}
+
+/* RESULT CARD */
+
+.result-card {
+    height: fit-content;
+}
+
+.result-header {
+    margin-bottom: 20px;
+}
+
+.result-header span {
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.result-main {
+    background: #f8f9ff;
+    border: 1px solid #e4e7ff;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+}
+
+.result-main small {
+    color: #6b7280;
+    font-size: 11px;
+}
+
+.result-main strong {
+    display: block;
+    color: #4f46e5;
+    font-size: 42px;
+    margin: 5px 0;
+}
+
+.result-main span {
+    color: #6b7280;
+    font-size: 11px;
+}
+
+/* RESULT DETAILS */
+
+.result-details {
+    margin-top: 18px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f1f3;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-row span {
+    color: #6b7280;
+    font-size: 12px;
+}
+
+.result-row strong {
+    color: #111827;
+    font-size: 12px;
+}
+
+/* GRADE SCALE */
+
+.grade-scale {
+    margin-top: 22px;
+    background: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.grade-scale h3 {
+    font-size: 12px;
+    color: #111827;
+    margin-bottom: 10px;
+}
+
+.grade-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    font-size: 10px;
+    color: #6b7280;
+}
+
+/* INFO */
+
+.calculator-info {
+    margin-top: 20px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 18px 20px;
+}
+
+.calculator-info strong {
+    display: block;
+    color: #111827;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.calculator-info p {
+    color: #6b7280;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .calculator-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .calculator-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .calculator-card,
+    .result-card {
+        padding: 17px;
+        overflow-x: auto;
+    }
+
+    .subject-table {
+        min-width: 600px;
+    }
+
+}

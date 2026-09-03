@@ -1,0 +1,639 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyPilot — Student Productivity</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">S</div>
+
+                <div>
+                    <h2>StudyPilot</h2>
+                    <span>Student Workspace</span>
+                </div>
+            </div>
+
+
+            <div class="nav-section">
+
+                <p class="nav-title">MAIN</p>
+
+                <a href="index.html" class="nav-item active">
+                    <span>▦</span>
+                    Dashboard
+                </a>
+
+                <a href="planner.html" class="nav-item">
+                    <span>✓</span>
+                    Study Planner
+                </a>
+
+                <a href="exams.html" class="nav-item">
+                    <span>◷</span>
+                    Exams
+                </a>
+
+                <a href="notes.html" class="nav-item">
+                    <span>▤</span>
+                    Notes
+                </a>
+
+                <p class="nav-title">TOOLS</p>
+
+                <a href="calculator.html" class="nav-item">
+                    <span>＋</span>
+                    VTU Calculator
+                </a>
+
+                <a href="quiz.html" class="nav-item">
+                    <span>◇</span>
+                    Quiz
+                </a>
+
+                <a href="ai-helper.html" class="nav-item">
+                    <span>✦</span>
+                    AI Study Helper
+                </a>
+
+            </div>
+
+
+            <div class="sidebar-bottom">
+
+                <div class="goal-card">
+
+                    <span class="goal-label">YOUR GOAL</span>
+
+                    <h3>Stay Consistent</h3>
+
+                    <p>
+                        Small progress every day
+                        creates big results.
+                    </p>
+
+                    <div class="goal-progress">
+                        <div></div>
+                    </div>
+
+                    <span class="goal-percent">72% weekly progress</span>
+
+                </div>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        S
+                    </div>
+
+                    <div>
+                        <strong>Student</strong>
+                        <span>Engineering Student</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOP BAR -->
+
+            <header class="topbar">
+
+                <div>
+                    <p class="breadcrumb">Dashboard</p>
+
+                    <h1>
+                        Good evening, Student 👋
+                    </h1>
+                </div>
+
+                <div class="top-actions">
+
+                    <button class="icon-button">
+                        🔔
+                    </button>
+
+                    <div class="date-box">
+                        <span>Today</span>
+                        <strong id="todayDate">Loading...</strong>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- ================= OVERVIEW ================= -->
+
+            <section class="overview">
+
+                <div class="overview-text">
+
+                    <span class="eyebrow">
+                        STUDY OVERVIEW
+                    </span>
+
+                    <h2>
+                        Keep moving forward.
+                    </h2>
+
+                    <p>
+                        Organize your studies, track your
+                        progress and stay prepared for exams.
+                    </p>
+
+                    <a href="planner.html" class="primary-button">
+                        Continue studying →
+                    </a>
+
+                </div>
+
+
+                <div class="overview-progress">
+
+                    <div class="circle-progress">
+
+                        <div class="circle-inner">
+
+                            <strong>72%</strong>
+
+                            <span>Weekly</span>
+
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <strong>Study Progress</strong>
+
+                        <p>
+                            You're doing great this week.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STATISTICS ================= -->
+
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Today's Tasks</span>
+                        <strong id="todayTasks">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+                        <span>Completed</span>
+                        <strong id="completedTasks">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+                        <span>Upcoming Exams</span>
+                        <strong id="upcomingExams">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ▤
+                    </div>
+
+                    <div>
+                        <span>Saved Notes</span>
+                        <strong id="savedNotes">0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= CONTENT GRID ================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- TODAY'S PLAN -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="eyebrow">
+                                TODAY
+                            </span>
+
+                            <h2>
+                                Study Plan
+                            </h2>
+                        </div>
+
+                        <a href="planner.html">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="task-list">
+
+                        <div class="task">
+
+                            <div class="task-check">
+                                ✓
+                            </div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Data Structures
+                                </strong>
+
+                                <span>
+                                    Arrays &amp; Linked Lists
+                                </span>
+
+                            </div>
+
+                            <span class="task-time">
+                                1 hr
+                            </span>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check pending">
+                            </div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Python Programming
+                                </strong>
+
+                                <span>
+                                    Functions &amp; Modules
+                                </span>
+
+                            </div>
+
+                            <span class="task-time">
+                                45 min
+                            </span>
+
+                        </div>
+
+
+                        <div class="task">
+
+                            <div class="task-check pending">
+                            </div>
+
+                            <div class="task-content">
+
+                                <strong>
+                                    Mathematics
+                                </strong>
+
+                                <span>
+                                    Practice problems
+                                </span>
+
+                            </div>
+
+                            <span class="task-time">
+                                1 hr
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EXAMS -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="eyebrow">
+                                EXAMS
+                            </span>
+
+                            <h2>
+                                Upcoming
+                            </h2>
+                        </div>
+
+                        <a href="exams.html">
+                            View all →
+                        </a>
+
+                    </div>
+
+
+                    <div class="exam-list">
+
+                        <div class="exam">
+
+                            <div class="exam-date">
+
+                                <strong>
+                                    18
+                                </strong>
+
+                                <span>
+                                    SEP
+                                </span>
+
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Data Structures
+                                </strong>
+
+                                <span>
+                                    Internal Assessment
+                                </span>
+                            </div>
+
+                            <b>
+                                18 days
+                            </b>
+
+                        </div>
+
+
+                        <div class="exam">
+
+                            <div class="exam-date">
+
+                                <strong>
+                                    25
+                                </strong>
+
+                                <span>
+                                    SEP
+                                </span>
+
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Mathematics
+                                </strong>
+
+                                <span>
+                                    Internal Assessment
+                                </span>
+                            </div>
+
+                            <b>
+                                25 days
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- ================= QUICK ACTIONS ================= -->
+
+            <section class="quick-section">
+
+                <div class="section-title">
+
+                    <div>
+                        <span class="eyebrow">
+                            QUICK ACCESS
+                        </span>
+
+                        <h2>
+                            What would you like to do?
+                        </h2>
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+
+                    <a href="planner.html" class="quick-card">
+
+                        <div class="quick-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Plan your study
+                            </strong>
+
+                            <span>
+                                Organize today's tasks
+                            </span>
+                        </div>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="notes.html" class="quick-card">
+
+                        <div class="quick-icon">
+                            ▤
+                        </div>
+
+                        <div>
+                            <strong>
+                                Create notes
+                            </strong>
+
+                            <span>
+                                Save important concepts
+                            </span>
+                        </div>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="quiz.html" class="quick-card">
+
+                        <div class="quick-icon">
+                            ◇
+                        </div>
+
+                        <div>
+                            <strong>
+                                Take a quiz
+                            </strong>
+
+                            <span>
+                                Test your knowledge
+                            </span>
+                        </div>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a href="ai-helper.html" class="quick-card">
+
+                        <div class="quick-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <strong>
+                                Ask AI
+                            </strong>
+
+                            <span>
+                                Get help with your studies
+                            </span>
+                        </div>
+
+                        <span class="arrow">
+                            →
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MOTIVATION ================= -->
+
+            <section class="motivation">
+
+                <div>
+
+                    <span class="eyebrow">
+                        STUDY PILOT
+                    </span>
+
+                    <h2>
+                        Plan. Learn. Prepare. Achieve.
+                    </h2>
+
+                    <p>
+                        Your studies are easier when everything
+                        is organized in one place.
+                    </p>
+
+                </div>
+
+                <div class="motivation-steps">
+
+                    <span>01 Plan</span>
+                    <span>02 Learn</span>
+                    <span>03 Practice</span>
+                    <span>04 Achieve</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <footer>
+
+                <span>
+                    © 2026 StudyPilot
+                </span>
+
+                <span>
+                    Built for students
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>
+```

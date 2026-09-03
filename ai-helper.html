@@ -1,0 +1,306 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyPilot — AI Assistant</title>
+
+    <!-- Main StudyPilot CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- AI Assistant CSS -->
+    <link rel="stylesheet" href="ai-helper.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <div class="logo">🎓 StudyPilot</div>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="planner.html">Planner</a>
+            <a href="exams.html">Exams</a>
+            <a href="notes.html">Notes</a>
+            <a href="calculator.html">Calculator</a>
+            <a href="quiz.html">Quiz</a>
+            <a href="ai-helper.html" class="active">AI Assistant</a>
+        </nav>
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- PAGE HEADER -->
+
+        <section class="ai-page-header">
+
+            <span class="ai-badge">
+                ✨ SMART LEARNING
+            </span>
+
+            <h1>
+                Meet your AI Study Assistant 🤖
+            </h1>
+
+            <p>
+                Ask questions, get explanations, and study smarter with StudyPilot.
+            </p>
+
+        </section>
+
+
+        <!-- ================= AI CONTAINER ================= -->
+
+        <section class="ai-container">
+
+            <div class="ai-chat-card">
+
+
+                <!-- ================= CHAT HEADER ================= -->
+
+                <div class="ai-chat-header">
+
+                    <div class="ai-profile">
+
+                        <div class="ai-avatar">
+                            🤖
+                        </div>
+
+                        <div>
+                            <h2>StudyPilot AI</h2>
+
+                            <span>
+                                ● Online
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="clear-chat-btn"
+                        id="clearChatButton">
+
+                        🗑 Clear
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================= CHAT MESSAGES ================= -->
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages">
+
+                    <!-- Initial AI message -->
+
+                    <div class="message ai-message">
+
+                        <div class="message-avatar">
+                            🤖
+                        </div>
+
+                        <div class="message-content">
+
+                            <strong class="message-name">
+                                StudyPilot AI
+                            </strong>
+
+                            <div class="message-bubble">
+
+                                Hello! 👋 I'm your StudyPilot AI Assistant.
+
+                                <br><br>
+
+                                Ask me about programming, DSA, DBMS,
+                                mathematics, engineering, exams,
+                                projects, or career preparation.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= QUICK QUESTIONS ================= -->
+
+                <div class="quick-questions">
+
+                    <p>Quick questions</p>
+
+                    <button
+                        type="button"
+                        class="quick-btn"
+                        data-question="What is DSA?">
+
+                        📚 What is DSA?
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-btn"
+                        data-question="Explain OOP">
+
+                        💻 Explain OOP
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-btn"
+                        data-question="What is DBMS?">
+
+                        🗄️ What is DBMS?
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="quick-btn"
+                        data-question="Explain Python">
+
+                        🐍 Explain Python
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================= INPUT AREA ================= -->
+
+                <div class="ai-input-area">
+
+                    <textarea
+                        id="userInput"
+                        placeholder="Ask your study question..."
+                        rows="1"
+                        autocomplete="off"></textarea>
+
+
+                    <button
+                        type="button"
+                        id="sendButton"
+                        class="send-btn"
+                        aria-label="Send message">
+
+                        ➤
+
+                    </button>
+
+                </div>
+
+
+                <!-- ================= DISCLAIMER ================= -->
+
+                <p class="ai-disclaimer">
+                    StudyPilot AI may make mistakes. Always verify important information.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FEATURES ================= -->
+
+        <section class="ai-features">
+
+            <div class="ai-feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Study Help
+                </h3>
+
+                <p>
+                    Get simple explanations for difficult concepts
+                    and engineering subjects.
+                </p>
+
+            </div>
+
+
+            <div class="ai-feature-card">
+
+                <div class="feature-icon">
+                    💡
+                </div>
+
+                <h3>
+                    Learn Faster
+                </h3>
+
+                <p>
+                    Ask questions and understand concepts
+                    step by step.
+                </p>
+
+            </div>
+
+
+            <div class="ai-feature-card">
+
+                <div class="feature-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Career Support
+                </h3>
+
+                <p>
+                    Get guidance about programming,
+                    projects, DSA and software development.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div>
+            🎓 StudyPilot
+        </div>
+
+        <div>
+            Built for students • 2026
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="ai-helper.js"></script>
+
+</body>
+
+</html>
+```

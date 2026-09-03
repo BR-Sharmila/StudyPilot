@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Study Planner | StudyPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="planner.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">S</div>
+
+            <div>
+                <h2>StudyPilot</h2>
+                <span>Student Workspace</span>
+            </div>
+        </div>
+
+
+        <div class="nav-title">MAIN MENU</div>
+
+        <nav>
+
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                <label>Dashboard</label>
+            </a>
+
+            <a href="planner.html" class="nav-item active">
+                <span>✓</span>
+                <label>Study Planner</label>
+            </a>
+
+            <a href="exams.html" class="nav-item">
+                <span>▣</span>
+                <label>Exams</label>
+            </a>
+
+            <a href="notes.html" class="nav-item">
+                <span>▤</span>
+                <label>Notes</label>
+            </a>
+
+            <a href="calculator.html" class="nav-item">
+                <span>∑</span>
+                <label>VTU Calculator</label>
+            </a>
+
+            <a href="quiz.html" class="nav-item">
+                <span>?</span>
+                <label>Quiz</label>
+            </a>
+
+            <a href="ai-helper.html" class="nav-item">
+                <span>✦</span>
+                <label>AI Study Helper</label>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="goal-card">
+
+                <span class="goal-label">MY GOAL</span>
+
+                <h3>Become a Software Developer</h3>
+
+                <p>
+                    Build strong skills, complete projects
+                    and prepare for your career.
+                </p>
+
+                <div class="goal-progress">
+                    <div></div>
+                </div>
+
+                <span class="goal-percent">Keep moving forward</span>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="avatar">S</div>
+
+                <div>
+                    <strong>Student</strong>
+                    <span>BE CSE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="breadcrumb">
+                    StudyPilot / Study Planner
+                </div>
+
+                <h1>Study Planner</h1>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <div class="date-box">
+
+                    <span>Today</span>
+
+                    <strong id="headerDate">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="planner-intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    ORGANIZE YOUR DAY
+                </span>
+
+                <h2>
+                    Plan your study. Stay consistent.
+                </h2>
+
+                <p>
+                    Add your study tasks, set priorities and
+                    track your progress throughout the day.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="primary-button"
+                id="addTaskBtn">
+
+                + Add Task
+
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="planner-stats">
+
+            <div class="planner-stat">
+
+                <div class="planner-stat-icon blue">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Total Tasks</span>
+                    <strong id="totalTasks">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="planner-stat">
+
+                <div class="planner-stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedTasks">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="planner-stat">
+
+                <div class="planner-stat-icon orange">
+                    ◷
+                </div>
+
+                <div>
+                    <span>Pending</span>
+                    <strong id="pendingTasks">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="planner-stat">
+
+                <div class="planner-stat-icon purple">
+                    !
+                </div>
+
+                <div>
+                    <span>High Priority</span>
+                    <strong id="highPriorityTasks">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TOOLBAR ================= -->
+
+        <section class="planner-toolbar">
+
+            <div class="date-selector">
+
+                <label for="taskDate">
+                    Select Date
+                </label>
+
+                <input
+                    type="date"
+                    id="taskDate">
+
+            </div>
+
+
+            <div class="filter-selector">
+
+                <label for="taskFilter">
+                    Filter
+                </label>
+
+                <select id="taskFilter">
+
+                    <option value="all">
+                        All Tasks
+                    </option>
+
+                    <option value="pending">
+                        Pending
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= TASK PANEL ================= -->
+
+        <section class="task-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        YOUR TASKS
+                    </span>
+
+                    <h2 id="taskListTitle">
+                        Today's Tasks
+                    </h2>
+
+                </div>
+
+                <span
+                    class="task-count"
+                    id="visibleTaskCount">
+
+                    0 tasks
+
+                </span>
+
+            </div>
+
+
+
+            <!-- TASK LIST -->
+
+            <div id="taskList">
+
+                <!-- JavaScript adds tasks here -->
+
+            </div>
+
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="empty-state"
+                id="emptyState">
+
+                <div class="empty-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    No tasks yet
+                </h3>
+
+                <p>
+                    Start planning your study day by
+                    adding your first task.
+                </p>
+
+                <!-- IMPORTANT -->
+                <button
+                    type="button"
+                    class="empty-button"
+                    id="addFirstTaskBtn">
+
+                    + Add your first task
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STUDY TIP ================= -->
+
+        <section class="study-tip">
+
+            <div class="tip-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <strong>
+                    Study Tip
+                </strong>
+
+                <p>
+                    Break large subjects into smaller tasks.
+                    Completing small tasks consistently makes
+                    difficult topics easier.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                © 2026 StudyPilot
+            </span>
+
+            <span>
+                Study smarter • Stay consistent • Achieve more
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     ADD / EDIT TASK MODAL
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="taskModal"
+    hidden>
+
+    <div
+        class="task-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    STUDY PLANNER
+                </span>
+
+                <h2 id="modalTitle">
+                    Add New Task
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="close-modal"
+                id="closeModalBtn"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="taskForm">
+
+            <input
+                type="hidden"
+                id="taskId">
+
+
+            <!-- TITLE -->
+
+            <div class="form-group">
+
+                <label for="taskTitle">
+                    Task Title *
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Example: Study Engineering Mathematics"
+                    required>
+
+            </div>
+
+
+
+            <!-- SUBJECT -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="taskSubject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="taskSubject"
+                        placeholder="Example: Mathematics">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskPriority">
+                        Priority
+                    </label>
+
+                    <select id="taskPriority">
+
+                        <option value="low">
+                            Low
+                        </option>
+
+                        <option value="medium" selected>
+                            Medium
+                        </option>
+
+                        <option value="high">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DATE / TIME -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="taskDueDate">
+                        Date *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="taskDueDate"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="taskTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="taskTime">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DURATION -->
+
+            <div class="form-group">
+
+                <label for="taskDuration">
+                    Study Duration
+                </label>
+
+                <select id="taskDuration">
+
+                    <option value="30 minutes">
+                        30 minutes
+                    </option>
+
+                    <option value="1 hour" selected>
+                        1 hour
+                    </option>
+
+                    <option value="1.5 hours">
+                        1.5 hours
+                    </option>
+
+                    <option value="2 hours">
+                        2 hours
+                    </option>
+
+                    <option value="3 hours">
+                        3 hours
+                    </option>
+
+                    <option value="4+ hours">
+                        4+ hours
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- DESCRIPTION -->
+
+            <div class="form-group">
+
+                <label for="taskDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="taskDescription"
+                    rows="3"
+                    placeholder="Add a short note about this task..."></textarea>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelModalBtn">
+
+                    Cancel
+
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="save-button">
+
+                    Save Task
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<script src="planner.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VTU Calculator | StudyPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                S
+            </div>
+
+            <div>
+                <h2>StudyPilot</h2>
+                <span>Student Workspace</span>
+            </div>
+
+        </div>
+
+
+        <div class="nav-title">
+            MAIN MENU
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                <label>Dashboard</label>
+            </a>
+
+            <a href="planner.html" class="nav-item">
+                <span>✓</span>
+                <label>Study Planner</label>
+            </a>
+
+            <a href="exams.html" class="nav-item">
+                <span>▣</span>
+                <label>Exams</label>
+            </a>
+
+            <a href="notes.html" class="nav-item">
+                <span>▤</span>
+                <label>Notes</label>
+            </a>
+
+            <a href="calculator.html" class="nav-item active">
+                <span>∑</span>
+                <label>VTU Calculator</label>
+            </a>
+
+            <a href="quiz.html" class="nav-item">
+                <span>?</span>
+                <label>Quiz</label>
+            </a>
+
+            <a href="ai-helper.html" class="nav-item">
+                <span>✦</span>
+                <label>AI Study Helper</label>
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="goal-card">
+
+                <span class="goal-label">
+                    MY GOAL
+                </span>
+
+                <h3>
+                    Become a Software Developer
+                </h3>
+
+                <p>
+                    Build strong skills, complete projects
+                    and prepare for your career.
+                </p>
+
+                <div class="goal-progress">
+                    <div></div>
+                </div>
+
+                <span class="goal-percent">
+                    Keep moving forward
+                </span>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="avatar">
+                    S
+                </div>
+
+                <div>
+                    <strong>Student</strong>
+                    <span>BE CSE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="breadcrumb">
+                    StudyPilot / VTU Calculator
+                </div>
+
+                <h1>
+                    VTU Calculator
+                </h1>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="calculator-intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    ACADEMIC TOOLS
+                </span>
+
+                <h2>
+                    Calculate your academic performance.
+                </h2>
+
+                <p>
+                    Calculate marks, percentage, grades,
+                    SGPA and CGPA in one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CALCULATOR TABS ================= -->
+
+        <section class="calculator-tabs">
+
+            <button
+                class="calculator-tab active"
+                data-tab="marks">
+
+                Marks & Grade
+
+            </button>
+
+            <button
+                class="calculator-tab"
+                data-tab="sgpa">
+
+                SGPA
+
+            </button>
+
+            <button
+                class="calculator-tab"
+                data-tab="cgpa">
+
+                CGPA
+
+            </button>
+
+        </section>
+
+
+        <!-- =================================================
+             MARKS CALCULATOR
+        ================================================== -->
+
+        <section
+            class="calculator-panel active"
+            id="marksPanel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        MARKS CALCULATOR
+                    </span>
+
+                    <h2>
+                        Calculate Percentage & Grade
+                    </h2>
+
+                    <p>
+                        Enter your obtained and maximum marks.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="marks-form">
+
+                <div class="form-group">
+
+                    <label for="obtainedMarks">
+                        Obtained Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="obtainedMarks"
+                        placeholder="Example: 82"
+                        min="0">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="maximumMarks">
+                        Maximum Marks
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maximumMarks"
+                        placeholder="Example: 100"
+                        min="1">
+
+                </div>
+
+            </div>
+
+
+            <div class="calculator-actions">
+
+                <button
+                    type="button"
+                    class="calculate-button"
+                    id="calculateMarksBtn">
+
+                    Calculate
+
+                </button>
+
+                <button
+                    type="button"
+                    class="reset-button"
+                    id="resetMarksBtn">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div
+                class="marks-result"
+                id="marksResult"
+                hidden>
+
+                <div class="result-main">
+
+                    <span>
+                        Percentage
+                    </span>
+
+                    <strong id="percentageResult">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span>
+                        Grade
+                    </span>
+
+                    <strong id="gradeResult">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="result-item">
+
+                    <span>
+                        Performance
+                    </span>
+
+                    <strong id="performanceResult">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             SGPA CALCULATOR
+        ================================================== -->
+
+        <section
+            class="calculator-panel"
+            id="sgpaPanel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        SGPA CALCULATOR
+                    </span>
+
+                    <h2>
+                        Calculate Semester GPA
+                    </h2>
+
+                    <p>
+                        Enter subject credits and grade points.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBJECT TABLE -->
+
+            <div class="subject-table-wrapper">
+
+                <table class="subject-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Subject
+                            </th>
+
+                            <th>
+                                Credits
+                            </th>
+
+                            <th>
+                                Grade Point
+                            </th>
+
+                            <th>
+                                Action
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="sgpaSubjects">
+
+                        <tr>
+
+                            <td>
+                                <input
+                                    type="text"
+                                    class="subject-name"
+                                    placeholder="Subject 1">
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    class="subject-credit"
+                                    min="1"
+                                    max="10"
+                                    placeholder="4">
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    class="subject-grade"
+                                    min="0"
+                                    max="10"
+                                    step="0.1"
+                                    placeholder="8">
+                            </td>
+
+                            <td>
+                                <button
+                                    type="button"
+                                    class="remove-subject"
+                                    disabled>
+                                    ×
+                                </button>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="add-subject-button"
+                id="addSubjectBtn">
+
+                + Add Subject
+
+            </button>
+
+
+            <div class="calculator-actions">
+
+                <button
+                    type="button"
+                    class="calculate-button"
+                    id="calculateSgpaBtn">
+
+                    Calculate SGPA
+
+                </button>
+
+                <button
+                    type="button"
+                    class="reset-button"
+                    id="resetSgpaBtn">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+            <!-- SGPA RESULT -->
+
+            <div
+                class="gpa-result"
+                id="sgpaResult"
+                hidden>
+
+                <span>
+                    Your SGPA
+                </span>
+
+                <strong id="sgpaValue">
+                    0.00
+                </strong>
+
+                <small>
+                    Based on entered subjects
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CGPA CALCULATOR
+        ================================================== -->
+
+        <section
+            class="calculator-panel"
+            id="cgpaPanel">
+
+            <div class="panel-heading">
+
+                <div>
+
+                    <span class="eyebrow">
+                        CGPA CALCULATOR
+                    </span>
+
+                    <h2>
+                        Calculate Overall CGPA
+                    </h2>
+
+                    <p>
+                        Enter your semester SGPA values.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="semester-list"
+                id="semesterList">
+
+                <div class="semester-row">
+
+                    <label>
+                        Semester 1
+                    </label>
+
+                    <input
+                        type="number"
+                        class="semester-sgpa"
+                        min="0"
+                        max="10"
+                        step="0.01"
+                        placeholder="Example: 8.25">
+
+                </div>
+
+                <div class="semester-row">
+
+                    <label>
+                        Semester 2
+                    </label>
+
+                    <input
+                        type="number"
+                        class="semester-sgpa"
+                        min="0"
+                        max="10"
+                        step="0.01"
+                        placeholder="Example: 8.50">
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="add-semester-button"
+                id="addSemesterBtn">
+
+                + Add Semester
+
+            </button>
+
+
+            <div class="calculator-actions">
+
+                <button
+                    type="button"
+                    class="calculate-button"
+                    id="calculateCgpaBtn">
+
+                    Calculate CGPA
+
+                </button>
+
+                <button
+                    type="button"
+                    class="reset-button"
+                    id="resetCgpaBtn">
+
+                    Reset
+
+                </button>
+
+            </div>
+
+
+            <!-- CGPA RESULT -->
+
+            <div
+                class="gpa-result"
+                id="cgpaResult"
+                hidden>
+
+                <span>
+                    Your CGPA
+                </span>
+
+                <strong id="cgpaValue">
+                    0.00
+                </strong>
+
+                <small>
+                    Average of entered semester SGPA values
+                </small>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= GRADING INFO ================= -->
+
+        <section class="grading-info">
+
+            <div>
+
+                <span class="eyebrow">
+                    QUICK REFERENCE
+                </span>
+
+                <h2>
+                    Grade Point Reference
+                </h2>
+
+            </div>
+
+
+            <div class="grade-grid">
+
+                <div class="grade-card">
+
+                    <strong>10</strong>
+
+                    <span>Outstanding</span>
+
+                </div>
+
+                <div class="grade-card">
+
+                    <strong>9</strong>
+
+                    <span>Excellent</span>
+
+                </div>
+
+                <div class="grade-card">
+
+                    <strong>8</strong>
+
+                    <span>Very Good</span>
+
+                </div>
+
+                <div class="grade-card">
+
+                    <strong>7</strong>
+
+                    <span>Good</span>
+
+                </div>
+
+                <div class="grade-card">
+
+                    <strong>6</strong>
+
+                    <span>Above Average</span>
+
+                </div>
+
+                <div class="grade-card">
+
+                    <strong>5</strong>
+
+                    <span>Average</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                © 2026 StudyPilot
+            </span>
+
+            <span>
+                Study smarter • Stay consistent • Achieve more
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="calculator.js"></script>
+
+</body>
+</html>

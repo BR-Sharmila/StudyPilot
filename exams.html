@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exams | StudyPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="exams.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">S</div>
+
+            <div>
+                <h2>StudyPilot</h2>
+                <span>Student Workspace</span>
+            </div>
+
+        </div>
+
+        <div class="nav-title">MAIN MENU</div>
+
+        <nav>
+
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                <label>Dashboard</label>
+            </a>
+
+            <a href="planner.html" class="nav-item">
+                <span>✓</span>
+                <label>Study Planner</label>
+            </a>
+
+            <a href="exams.html" class="nav-item active">
+                <span>▣</span>
+                <label>Exams</label>
+            </a>
+
+            <a href="notes.html" class="nav-item">
+                <span>▤</span>
+                <label>Notes</label>
+            </a>
+
+            <a href="calculator.html" class="nav-item">
+                <span>∑</span>
+                <label>VTU Calculator</label>
+            </a>
+
+            <a href="quiz.html" class="nav-item">
+                <span>?</span>
+                <label>Quiz</label>
+            </a>
+
+            <a href="ai-helper.html" class="nav-item">
+                <span>✦</span>
+                <label>AI Study Helper</label>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="goal-card">
+
+                <span class="goal-label">MY GOAL</span>
+
+                <h3>Become a Software Developer</h3>
+
+                <p>
+                    Build strong skills, complete projects
+                    and prepare for your career.
+                </p>
+
+                <div class="goal-progress">
+                    <div></div>
+                </div>
+
+                <span class="goal-percent">
+                    Keep moving forward
+                </span>
+
+            </div>
+
+            <div class="profile">
+
+                <div class="avatar">S</div>
+
+                <div>
+                    <strong>Student</strong>
+                    <span>BE CSE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+
+                <div class="breadcrumb">
+                    StudyPilot / Exams
+                </div>
+
+                <h1>Exams</h1>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="date-box">
+
+                    <span>Today</span>
+
+                    <strong id="headerDate">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= INTRO ================= -->
+
+        <section class="exam-intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    EXAM PREPARATION
+                </span>
+
+                <h2>
+                    Stay prepared for every exam.
+                </h2>
+
+                <p>
+                    Add your exams, track important dates
+                    and plan your preparation effectively.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="primary-button"
+                id="addExamBtn">
+
+                + Add Exam
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="exam-stats">
+
+            <div class="exam-stat">
+
+                <div class="exam-stat-icon blue">
+                    ▣
+                </div>
+
+                <div>
+                    <span>Total Exams</span>
+                    <strong id="totalExams">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="exam-stat">
+
+                <div class="exam-stat-icon orange">
+                    ◷
+                </div>
+
+                <div>
+                    <span>Upcoming</span>
+                    <strong id="upcomingExams">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="exam-stat">
+
+                <div class="exam-stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Completed</span>
+                    <strong id="completedExams">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="exam-stat">
+
+                <div class="exam-stat-icon purple">
+                    !
+                </div>
+
+                <div>
+                    <span>High Priority</span>
+                    <strong id="highPriorityExams">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TOOLBAR ================= -->
+
+        <section class="exam-toolbar">
+
+            <div class="filter-selector">
+
+                <label for="examFilter">
+                    Filter Exams
+                </label>
+
+                <select id="examFilter">
+
+                    <option value="all">
+                        All Exams
+                    </option>
+
+                    <option value="upcoming">
+                        Upcoming
+                    </option>
+
+                    <option value="completed">
+                        Completed
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXAM PANEL ================= -->
+
+        <section class="exam-panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        YOUR EXAMS
+                    </span>
+
+                    <h2>
+                        Exam Schedule
+                    </h2>
+
+                </div>
+
+                <span
+                    class="exam-count"
+                    id="visibleExamCount">
+
+                    0 exams
+
+                </span>
+
+            </div>
+
+
+            <!-- EXAM LIST -->
+
+            <div id="examList">
+
+                <!-- JavaScript adds exams here -->
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="exam-empty"
+                id="examEmpty"
+                hidden>
+
+                <div class="exam-empty-icon">
+                    ▣
+                </div>
+
+                <h3>
+                    No exams found
+                </h3>
+
+                <p>
+                    Add your upcoming exams to start
+                    tracking your preparation.
+                </p>
+
+                <button
+                    type="button"
+                    class="empty-button"
+                    id="addFirstExamBtn">
+
+                    + Add your first exam
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= EXAM TIP ================= -->
+
+        <section class="exam-tip">
+
+            <div class="tip-icon">
+                ✦
+            </div>
+
+            <div>
+
+                <strong>
+                    Exam Preparation Tip
+                </strong>
+
+                <p>
+                    Start preparing early. Divide each
+                    subject into smaller topics and revise
+                    regularly instead of studying everything
+                    at the last minute.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer>
+
+            <span>
+                © 2026 StudyPilot
+            </span>
+
+            <span>
+                Study smarter • Stay consistent • Achieve more
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- =====================================================
+     ADD / EDIT EXAM MODAL
+===================================================== -->
+
+<div
+    class="exam-modal-overlay"
+    id="examModal"
+    hidden>
+
+    <div
+        class="exam-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="examModalTitle">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    EXAM MANAGER
+                </span>
+
+                <h2 id="examModalTitle">
+                    Add New Exam
+                </h2>
+
+            </div>
+
+            <button
+                type="button"
+                class="close-modal"
+                id="closeExamModalBtn"
+                aria-label="Close">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form id="examForm">
+
+            <input
+                type="hidden"
+                id="examId">
+
+
+            <!-- EXAM NAME -->
+
+            <div class="form-group">
+
+                <label for="examName">
+                    Exam Name *
+                </label>
+
+                <input
+                    type="text"
+                    id="examName"
+                    placeholder="Example: Engineering Mathematics"
+                    required>
+
+            </div>
+
+
+            <!-- SUBJECT / CODE -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="examSubject">
+                        Subject *
+                    </label>
+
+                    <input
+                        type="text"
+                        id="examSubject"
+                        placeholder="Example: Mathematics"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="examCode">
+                        Subject Code
+                    </label>
+
+                    <input
+                        type="text"
+                        id="examCode"
+                        placeholder="Example: 1BMATS101">
+
+                </div>
+
+            </div>
+
+
+            <!-- DATE / TIME -->
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <label for="examDate">
+                        Exam Date *
+                    </label>
+
+                    <input
+                        type="date"
+                        id="examDate"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="examTime">
+                        Exam Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="examTime">
+
+                </div>
+
+            </div>
+
+
+            <!-- PRIORITY -->
+
+            <div class="form-group">
+
+                <label for="examPriority">
+                    Priority
+                </label>
+
+                <select id="examPriority">
+
+                    <option value="low">
+                        Low
+                    </option>
+
+                    <option value="medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="high">
+                        High
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SYLLABUS -->
+
+            <div class="form-group">
+
+                <label for="examSyllabus">
+                    Preparation Notes
+                </label>
+
+                <textarea
+                    id="examSyllabus"
+                    rows="4"
+                    placeholder="Example: Modules 1, 2 and 3"></textarea>
+
+            </div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelExamModalBtn">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="save-button">
+
+                    Save Exam
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="exams.js"></script>
+
+</body>
+</html>

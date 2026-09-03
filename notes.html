@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes | StudyPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="notes.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">S</div>
+
+            <div>
+                <h2>StudyPilot</h2>
+                <span>Student Workspace</span>
+            </div>
+        </div>
+
+        <div class="nav-title">MAIN MENU</div>
+
+        <nav>
+
+            <a href="index.html" class="nav-item">
+                <span>⌂</span>
+                <label>Dashboard</label>
+            </a>
+
+            <a href="planner.html" class="nav-item">
+                <span>✓</span>
+                <label>Study Planner</label>
+            </a>
+
+            <a href="exams.html" class="nav-item">
+                <span>▣</span>
+                <label>Exams</label>
+            </a>
+
+            <a href="notes.html" class="nav-item active">
+                <span>▤</span>
+                <label>Notes</label>
+            </a>
+
+            <a href="calculator.html" class="nav-item">
+                <span>∑</span>
+                <label>VTU Calculator</label>
+            </a>
+
+            <a href="quiz.html" class="nav-item">
+                <span>?</span>
+                <label>Quiz</label>
+            </a>
+
+            <a href="ai-helper.html" class="nav-item">
+                <span>✦</span>
+                <label>AI Study Helper</label>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="goal-card">
+
+                <span class="goal-label">MY GOAL</span>
+
+                <h3>Become a Software Developer</h3>
+
+                <p>
+                    Build strong skills, complete projects
+                    and prepare for your career.
+                </p>
+
+                <div class="goal-progress">
+                    <div></div>
+                </div>
+
+                <span class="goal-percent">
+                    Keep moving forward
+                </span>
+
+            </div>
+
+            <div class="profile">
+
+                <div class="avatar">S</div>
+
+                <div>
+                    <strong>Student</strong>
+                    <span>BE CSE</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+
+                <div class="breadcrumb">
+                    StudyPilot / Notes
+                </div>
+
+                <h1>
+                    My Notes
+                </h1>
+
+            </div>
+
+            <div class="top-actions">
+
+                <div class="date-box">
+
+                    <span>Today</span>
+
+                    <strong id="notesDate">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- NOTES INTRO -->
+        <section class="notes-intro">
+
+            <div>
+
+                <span class="eyebrow">
+                    SMART NOTES
+                </span>
+
+                <h2>
+                    Capture what you learn.
+                </h2>
+
+                <p>
+                    Create, organize and quickly find your
+                    important study notes in one place.
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="new-note-button"
+                id="newNoteBtn">
+
+                + New Note
+
+            </button>
+
+        </section>
+
+
+        <!-- STATS -->
+        <section class="notes-stats">
+
+            <div class="notes-stat">
+
+                <div class="notes-stat-icon">
+                    ▤
+                </div>
+
+                <div>
+                    <span>Total Notes</span>
+                    <strong id="totalNotes">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="notes-stat">
+
+                <div class="notes-stat-icon green">
+                    ✓
+                </div>
+
+                <div>
+                    <span>This Week</span>
+                    <strong id="weekNotes">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="notes-stat">
+
+                <div class="notes-stat-icon orange">
+                    ★
+                </div>
+
+                <div>
+                    <span>Favorites</span>
+                    <strong id="favoriteNotes">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SEARCH / FILTER -->
+        <section class="notes-toolbar">
+
+            <div class="search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchNotes"
+                    placeholder="Search your notes...">
+
+            </div>
+
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="DSA">
+                    DSA
+                </option>
+
+                <option value="Python">
+                    Python
+                </option>
+
+                <option value="Mathematics">
+                    Mathematics
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- NOTES PANEL -->
+        <section class="notes-panel">
+
+            <div class="notes-panel-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        YOUR NOTES
+                    </span>
+
+                    <h2>
+                        Study Library
+                    </h2>
+
+                </div>
+
+                <span id="noteCountLabel">
+                    0 notes
+                </span>
+
+            </div>
+
+
+            <!-- NOTES GRID -->
+            <div
+                class="notes-grid"
+                id="notesGrid">
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+            <div
+                class="notes-empty"
+                id="notesEmpty">
+
+                <div class="empty-note-icon">
+                    📝
+                </div>
+
+                <h3>
+                    No notes yet
+                </h3>
+
+                <p>
+                    Create your first study note and
+                    keep your important concepts organized.
+                </p>
+
+                <button
+                    type="button"
+                    id="emptyNewNoteBtn"
+                    class="empty-note-button">
+
+                    + Create your first note
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <span>
+                © 2026 StudyPilot
+            </span>
+
+            <span>
+                Study smarter • Stay organized
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- ================= NOTE MODAL ================= -->
+
+<div
+    class="note-modal-overlay"
+    id="noteModal"
+    hidden>
+
+    <div
+        class="note-modal"
+        role="dialog"
+        aria-modal="true">
+
+        <div class="note-modal-header">
+
+            <div>
+
+                <span class="eyebrow">
+                    NOTES
+                </span>
+
+                <h2 id="noteModalTitle">
+                    Create New Note
+                </h2>
+
+            </div>
+
+            <button
+                type="button"
+                class="close-note-modal"
+                id="closeNoteModal">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <!-- NOTE FORM -->
+        <form id="noteForm">
+
+            <input
+                type="hidden"
+                id="noteId">
+
+
+            <div class="note-form-group">
+
+                <label for="noteTitle">
+                    Note Title *
+                </label>
+
+                <input
+                    type="text"
+                    id="noteTitle"
+                    placeholder="Example: Important DSA Concepts"
+                    required>
+
+            </div>
+
+
+            <div class="note-form-row">
+
+                <div class="note-form-group">
+
+                    <label for="noteCategory">
+                        Category
+                    </label>
+
+                    <select id="noteCategory">
+
+                        <option value="DSA">
+                            DSA
+                        </option>
+
+                        <option value="Python">
+                            Python
+                        </option>
+
+                        <option value="Mathematics">
+                            Mathematics
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="note-form-group">
+
+                    <label for="noteSubject">
+                        Subject
+                    </label>
+
+                    <input
+                        type="text"
+                        id="noteSubject"
+                        placeholder="Example: Data Structures">
+
+                </div>
+
+            </div>
+
+
+            <div class="note-form-group">
+
+                <label for="noteContent">
+                    Note Content *
+                </label>
+
+                <textarea
+                    id="noteContent"
+                    rows="8"
+                    placeholder="Write your study notes here..."
+                    required></textarea>
+
+            </div>
+
+
+            <div class="note-form-options">
+
+                <label class="favorite-check">
+
+                    <input
+                        type="checkbox"
+                        id="noteFavorite">
+
+                    <span>
+                        ★ Mark as favorite
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div class="note-modal-actions">
+
+                <button
+                    type="button"
+                    class="note-cancel-button"
+                    id="cancelNoteModal">
+
+                    Cancel
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="note-save-button">
+
+                    Save Note
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="notes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1118 @@
+/* =========================================
+   STUDYPILOT — STUDY PLANNER
+========================================= */
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.planner-intro {
+
+    background: linear-gradient(
+        110deg,
+        #eef2ff,
+        #f7f5ff
+    );
+
+    border: 1px solid #e3e5ff;
+
+    border-radius: 16px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.planner-intro h2 {
+
+    font-size: 24px;
+
+    color: var(--dark);
+
+    margin: 7px 0;
+
+}
+
+
+.planner-intro p {
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.planner-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.planner-stat {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.planner-stat-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+}
+
+
+.planner-stat-icon.blue {
+
+    background: #eef2ff;
+
+    color: #4f46e5;
+
+}
+
+
+.planner-stat-icon.green {
+
+    background: #ecfdf5;
+
+    color: #16a34a;
+
+}
+
+
+.planner-stat-icon.orange {
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+}
+
+
+.planner-stat-icon.purple {
+
+    background: #faf5ff;
+
+    color: #9333ea;
+
+}
+
+
+.planner-stat span {
+
+    display: block;
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+.planner-stat strong {
+
+    display: block;
+
+    font-size: 21px;
+
+    color: var(--dark);
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.planner-toolbar {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 15px 18px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.date-selector,
+.filter-selector {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.date-selector label,
+.filter-selector label {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    font-weight: 600;
+
+}
+
+
+.date-selector input,
+.filter-selector select {
+
+    height: 38px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 0 11px;
+
+    color: var(--dark);
+
+    background: white;
+
+    outline: none;
+
+    font-size: 12px;
+
+}
+
+
+.date-selector input:focus,
+.filter-selector select:focus {
+
+    border-color: var(--primary);
+
+}
+
+
+/* =========================================
+   TASK PANEL
+========================================= */
+
+.task-panel {
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 21px;
+
+    min-height: 350px;
+
+}
+
+
+.task-panel .panel-header {
+
+    margin-bottom: 10px;
+
+}
+
+
+.task-count {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    background: #f3f4f6;
+
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+}
+
+
+/* =========================================
+   TASK ITEM
+========================================= */
+
+.planner-task {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 15px 4px;
+
+    border-bottom: 1px solid #f0f1f3;
+
+    transition: 0.2s;
+
+}
+
+
+.planner-task:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.planner-task:hover {
+
+    background: #fafaff;
+
+}
+
+
+/* CHECKBOX */
+
+.task-checkbox {
+
+    width: 24px;
+
+    height: 24px;
+
+    min-width: 24px;
+
+    border-radius: 50%;
+
+    border: 1.5px solid #d1d5db;
+
+    background: white;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.task-checkbox:hover {
+
+    border-color: var(--primary);
+
+}
+
+
+.planner-task.completed .task-checkbox {
+
+    background: var(--green);
+
+    border-color: var(--green);
+
+}
+
+
+/* CONTENT */
+
+.planner-task-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+.planner-task-title {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--dark);
+
+}
+
+
+.planner-task.completed .planner-task-title {
+
+    text-decoration: line-through;
+
+    color: #9ca3af;
+
+}
+
+
+.planner-task-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 5px;
+
+}
+
+
+.task-subject {
+
+    font-size: 9px;
+
+    color: var(--primary);
+
+    background: var(--primary-light);
+
+    padding: 4px 7px;
+
+    border-radius: 5px;
+
+}
+
+
+.task-duration,
+.task-time {
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+}
+
+
+.task-description {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    margin-top: 5px;
+
+}
+
+
+/* =========================================
+   PRIORITY
+========================================= */
+
+.priority-badge {
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    padding: 5px 7px;
+
+    border-radius: 5px;
+
+    text-transform: uppercase;
+
+}
+
+
+.priority-high {
+
+    background: #fff1f2;
+
+    color: #e11d48;
+
+}
+
+
+.priority-medium {
+
+    background: #fff7ed;
+
+    color: #ea580c;
+
+}
+
+
+.priority-low {
+
+    background: #f0fdf4;
+
+    color: #16a34a;
+
+}
+
+
+/* =========================================
+   TASK ACTIONS
+========================================= */
+
+.task-actions {
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.task-action {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    color: var(--muted);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.2s;
+
+}
+
+
+.task-action:hover {
+
+    color: var(--primary);
+
+    border-color: #c7c9ff;
+
+}
+
+
+.task-action.delete:hover {
+
+    color: #dc2626;
+
+    border-color: #fecaca;
+
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+
+    min-height: 270px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+}
+
+
+.empty-icon {
+
+    width: 58px;
+
+    height: 58px;
+
+    border-radius: 50%;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+
+}
+
+
+.empty-state h3 {
+
+    font-size: 16px;
+
+    color: var(--dark);
+
+}
+
+
+.empty-state p {
+
+    max-width: 330px;
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+    margin: 7px 0 15px;
+
+}
+
+
+.empty-button {
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.empty-button:hover {
+
+    transform: translateY(-1px);
+
+    background: #4338ca;
+
+}
+
+
+/* =========================================
+   STUDY TIP
+========================================= */
+
+.study-tip {
+
+    margin-top: 18px;
+
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    padding: 17px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+}
+
+
+.tip-icon {
+
+    width: 37px;
+
+    height: 37px;
+
+    background: var(--primary-light);
+
+    color: var(--primary);
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.study-tip strong {
+
+    display: block;
+
+    color: var(--dark);
+
+    font-size: 11px;
+
+}
+
+
+.study-tip p {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    margin-top: 3px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+[hidden] {
+
+    display: none !important;
+
+}
+
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(17, 24, 39, 0.48);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+
+}
+
+
+.task-modal {
+
+    width: 100%;
+
+    max-width: 540px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18);
+
+    padding: 25px;
+
+    animation: modalOpen 0.18s ease;
+
+}
+
+
+@keyframes modalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px) scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.modal-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 22px;
+
+}
+
+
+.modal-header h2 {
+
+    color: var(--dark);
+
+    font-size: 20px;
+
+    margin-top: 5px;
+
+}
+
+
+.close-modal {
+
+    width: 34px;
+
+    height: 34px;
+
+    border: 1px solid var(--border);
+
+    background: white;
+
+    border-radius: 8px;
+
+    font-size: 21px;
+
+    color: var(--muted);
+
+    cursor: pointer;
+
+}
+
+
+.close-modal:hover {
+
+    background: #f3f4f6;
+
+    color: var(--dark);
+
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.form-group label {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    color: var(--dark);
+
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 10px 11px;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    color: var(--dark);
+
+    background: white;
+
+    outline: none;
+
+}
+
+
+.form-group textarea {
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--primary);
+
+    box-shadow: 0 0 0 3px #eef2ff;
+
+}
+
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+
+}
+
+
+/* =========================================
+   MODAL BUTTONS
+========================================= */
+
+.modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    border-top: 1px solid var(--border);
+
+    padding-top: 17px;
+
+    margin-top: 5px;
+
+}
+
+
+.cancel-button,
+.save-button {
+
+    border-radius: 8px;
+
+    padding: 10px 16px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+}
+
+
+.cancel-button {
+
+    background: white;
+
+    color: var(--text);
+
+    border: 1px solid var(--border);
+
+}
+
+
+.cancel-button:hover {
+
+    background: #f9fafb;
+
+}
+
+
+.save-button {
+
+    background: var(--primary);
+
+    color: white;
+
+    border: 1px solid var(--primary);
+
+}
+
+
+.save-button:hover {
+
+    background: #4338ca;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .planner-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .planner-intro {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .planner-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .planner-toolbar {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+    }
+
+
+    .date-selector input,
+    .filter-selector select {
+
+        width: 100%;
+
+    }
+
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+    }
+
+
+    .task-panel {
+
+        padding: 15px;
+
+    }
+
+
+    .planner-task {
+
+        align-items: flex-start;
+
+    }
+
+
+    .task-actions {
+
+        flex-direction: column;
+
+    }
+
+
+    .task-modal {
+
+        padding: 20px;
+
+    }
+
+}
