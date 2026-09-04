@@ -12,6 +12,10 @@ It is built as a practical Computer Science project to improve productivity and 
 
 A visual demonstration of StudyPilot's main features and functionality.
 
+### ▶️ Watch the Demo
+
+[🎬 Watch StudyPilot Demo](./studypilot.mp4)
+
 ---
 
 ## ✨ Features
@@ -107,7 +111,9 @@ StudyPilot/
 │
 ├── ai-helper.html
 ├── ai-helper.css
-└── ai-helper.js
+├── ai-helper.js
+│
+└── studypilot.mp4
 ```
 
 ---
@@ -150,7 +156,7 @@ StudyPilot was developed as a practical project to apply concepts of:
 
 The core StudyPilot features are implemented and functional.
 
-The project will continue to improve with additional features, better UI, security improvements, and enhanced functionality.
+The project is being improved with additional features, better UI, security improvements, and enhanced functionality.
 
 ---
 
